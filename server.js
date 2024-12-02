@@ -12,6 +12,8 @@ connectDb();
 
 app.use(express.json()); //to receive the body from the client
 app.use('/api/contacts', require('./routes/contactRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
+
 app.use(errHandler)
 
 app.listen(port, () => {
